@@ -1,0 +1,54 @@
+//
+//  iTalkPrefixHeader.pch
+//  iTalk
+//
+//  Created by locky1218 on 15-3-29.
+//  Copyright (c) 2015年 locky. All rights reserved.
+//
+
+#ifndef iTalk_iTalkPrefixHeader_pch
+#define iTalk_iTalkPrefixHeader_pch
+// OC中有避免重复包含的功能，可以不加这个
+
+#ifdef __OBJC__  //oc语言才去包含
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "SVProgressHUD.h"
+#import "LJUtil.h"
+#import "Reachability.h"
+#import "AppDelegate.h"
+
+#import "FMDatabase.h"
+#import "FMResultSet.h"
+
+#import "LJMessages.h"
+
+#import "KLComment.h"
+
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define DOMAIN_NAME @"192.168.0.104"
+
+//背景颜色
+#define COLOR_MILKWHITE_BACKGROUND [UIColor colorWithRed:208.0/255.0 green:206.0/255.0 blue:204.0/255.0 alpha:1];
+//导航栏标题颜色
+#define COLOR_NAVIGATION_TITLE [UIColor colorWithRed:163.0/255.0 green:150.0/255.0 blue:114.0/255.0 alpha:1]
+
+
+
+
+
+#define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? YES : NO)
+#define StatusBarHeight (IOS7==YES ? 0 : 20)
+#define BackHeight      (IOS7==YES ? 0 : 15)
+
+#define fNavBarHeigth (IOS7==YES ? 64 : 44)
+
+#define fDeviceWidth ([UIScreen mainScreen].bounds.size.width)
+#define fDeviceHeight ([UIScreen mainScreen].bounds.size.height-StatusBarHeight)
+
+#endif
+
+#endif
+
